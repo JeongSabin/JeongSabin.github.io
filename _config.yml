@@ -22,19 +22,16 @@ baseurl:               ''
 lang:                  en
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:                 JeongSabin Blog
+title:                 Jeong Sabin Blog
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  A Jekyll theme with JavaScript powers. "Best Theme by a Mile".
-  Combines the best of static sites and modern web apps.
-  Open `_config.yml` to edit this text.
+  Hello, My name is Sabin Jeong. 이 블로그는 제 개인 공부 내용 정리 및 알고리즘 문제 풀이를 기록하는 블로그입니다.
 
 # A shorter description for the sidebar.
 tagline:               >
-  A Jekyll theme with JavaScript powers.
-  Open `_config.yml` to edit this text.
+    Hello, My name is Sabin Jeong. 이 블로그는 제 개인 공부 내용 정리 및 알고리즘 문제 풀이를 기록하는 블로그입니다.
 
 # A list of keywords for your blog
 keywords:              []
@@ -45,8 +42,8 @@ logo:                  /assets/icons/icon.png
 # This should be the same author as first entry in `_data/authors.yml`.
 # Duplication is necessary due to the `jekyll-feed`, `jekyll-seo-tag` plugin.
 author:
-  name:                <firstname> <lastname>
-  email:               <mail@domain.tld>
+  name:                <Jeong> <Sabin>
+  email:               <sabin20030720@gmail.com>
   # Used by `jekyll-seo-tag`:
   # twitter:             <username>
 
@@ -229,7 +226,7 @@ plugins:
 #   name:                <firstname> <lastname>
 #   links:
 #     - https://twitter.com/<username>
-#     - https://github.com/<username>
+#     - https://github.com/<JeongSabin>
 
 
 # Other Plugins
