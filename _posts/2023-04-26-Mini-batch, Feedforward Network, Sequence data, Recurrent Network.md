@@ -2,7 +2,7 @@
 layout: post
 title: Mini-batch, Feedforward Network, Sequence data, Recurrent Network
 description: >
-  2023.04.19 열세번째 게시글
+  2023.04.26 열세번째 게시글
 tags: [hydejack]
 ---
 
