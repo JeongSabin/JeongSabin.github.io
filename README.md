@@ -1,123 +1,61 @@
-# Hydejack
-[![Gem Version](https://badge.fury.io/rb/jekyll-theme-hydejack.svg)](https://badge.fury.io/rb/jekyll-theme-hydejack)
+# Klisé
 
-**Hydejack** is a Jekyll theme with JavaScript powers, combining the best of static sites and modern web apps.
-It features a suite of JavaScript that makes the page feel like an app, without sacrificing backwards-compatibility,
-page-load speed or SEO.
-
-> Your presence on the web — A [blog], a [portfolio] and a [resume].
-
-**Hydejack** aims to be the complete package for professionals on the web.
-It features a blog suitable for both prose and technical documentation,
-a showcase for your projects, and a resume that fits with the rest of the design.
-
-![Screenshot](https://qwtel.com/assets/img/projects/default.jpg)
-
-## Demo
-It's best to just [see it in action](https://qwtel.com/hydejack/).
+Klisé is minimalist Jekyll theme for running a personal site and blog running on Jekyll.<br>
+For demo <a href="https://klise.now.sh" target="_blank" rel="noopener">klise.now.sh</a>
 
 ## Features
-Both versions include these features:
 
-* Full in-app page loading, powered by [hy-push-state]
-* A customizable sidebar that turns into a drawer menu on mobile, powered by [hy-drawer]
-* Advanced FLIP animations, inspired by Material Design
-* Good [Google PageSpeed Score][gpss][^3]
-* Higher *perceived speed* thanks to content pre-fetching
-* [Syntax highlighting][syntax], powered by [Rouge]
-* [LaTeX math blocks][latex], powered by [KaTeX]
-* Change the wording of built-in strings and possibly translate in other languages
-* Support for categories and tags
-* Built-in icons for many social networks
-* Simple and semantic HTML — can be viewed even with text-based browsers
-* Author section below each article and support for multiple authors
-* Progressive enhancement — sacrifice features, not content
-* Google Analytics and Google Fonts support
-* Disqus comments
-* Print layout — Used to render Hydejack's [PDF documentation][pdf]
-* Blog layout via `jekyll-paginate` (optional)
-* SEO meta tags via `jekyll-seo-tag` (optional)
-* Github avatars via `jekyll-avatar` (optional)
-* Gist support via `jekyll-gist` (optional)
+- [x] Light & Dark Mode support :waxing_crescent_moon:
+- [x] Customizable (using `.scss`)
+- [x] Responsive (desktop, tab and mobile)
+- [x] Mobile First Design
+- [x] SEO Optimized
+- [x] Images of post Organized ([`jekyll-postfiles`](https://github.com/nhoizey/jekyll-postfiles))
+- [x] Generate Sitemap ([`jekyll-sitemap`](https://github.com/jekyll/jekyll-sitemap))
+- [x] RSS Feed ([`jekyll-feed`](https://github.com/jekyll/jekyll-feed))
+- [x] Syntax Highlighter ([`rouge`](https://github.com/rouge-ruby/rouge))
+- [x] Next & Previous Post
+- [x] Comment layout, enable in frontmatter if you wish
+- [x] Google analytics
+- [x] HTML Minify ([`jekyll-compress-html`](https://github.com/penibelst/jekyll-compress-html))
+- [x] W3C **Validated**
+- [x] Lighthouse and PageSpeed **Passed**
 
-## Documentation
-Hydejack is well documented. You can read the docs [on the Jekyll site][docs], or [on GitHub][wiki], or [download the PDF][pdf].
+![Lighthouse Result](./lighthouse.png)
 
-## Download
-There are two versions of **Hydejack**: The *free version* includes basic blogging functionality,
-as did previous versions of the theme.
-The *PRO version* includes additional features for professionals:
-A [portfolio], a [resume] layout and a [welcome] page to feature your favorite projects and posts.
+## Backlogs
 
-This table details what is and isn't included in each respective version.
+- [ ] Intergrated with PhotoSwipe.
+- [ ] Add schema.org meta information.
+- [ ] Transform class selector to BEM metodology.
 
-|                                     | Free                                   | PRO                                          |
-|:------------------------------------|:--------------------------------------:|:--------------------------------------------:|
-| Blog                                | &#x2714;                               | &#x2714;                                     |
-| [Features][feat]                    | &#x2714;                               | &#x2714;                                     |
-| [Portfolio] Layout                  |                                        | &#x2714;                                     |
-| [Resume] Layout                     |                                        | &#x2714;                                     |
-| [Welcome] Layout                    |                                        | &#x2714;                                     |
-| [Newsletter Box][news]              |                                        | &#x2714;                                     |
-| [Custom Forms][forms]               |                                        | &#x2714;                                     |
-| No Hydejack Branding                |                                        | &#x2714;                                     |
-| License                             | [GPL-3.0][license]                     | [PRO]                                        |
-| Source                              | [GitHub][src]                          | Included                                     |
-| Support[^1]                         | No                                     | No                                           |
-| Price                               | Free                                   | $29                                          |
-|                                     | [**Download**][kit]                    | [**Buy Now - $29**][buy] [^2]                |
-{:.stretch-table}
+## Installation
 
-[^1]: You MAY open an issue on GitHub, but no response and/or fix is guaranteed.
-      You understand that using Jekyll requires technical know-how, and is NOT comparable to Wordpress in terms of usability.
-      Please use the free version to confirm that Hydejack works for you.
-      For more, see the [PRO] license.
+Run local server:
 
-[^2]: Transactions secured by [Stripe](https://stripe.com). Downloads handled by [Simple Goods](https://simplegoods.co/).  
+```bash
+$ git clone https://github.com/piharpi/jekyll-klise.git
+$ cd jekyll-klise
+$ bundle install
+$ bundle exec jekyll serve
+```
 
-[^3]: Actual page load speed depends on your hosting provider, resolution of embedded images and usage of 3rd party plugins.  
+Navigate to `localhost:4000`. You're Welcome, Fork and be Stargazer.
 
-~~~
- __  __                __                                     __
-/\ \/\ \              /\ \             __                    /\ \
-\ \ \_\ \   __  __    \_\ \      __   /\_\      __       ___ \ \ \/'\
- \ \  _  \ /\ \/\ \   /'_` \   /'__`\ \/\ \   /'__`\    /'___\\ \ , <
-  \ \ \ \ \\ \ \_\ \ /\ \L\ \ /\  __/  \ \ \ /\ \L\.\_ /\ \__/ \ \ \\`\
-   \ \_\ \_\\/`____ \\ \___,_\\ \____\ _\ \ \\ \__/.\_\\ \____\ \ \_\ \_\
-    \/_/\/_/ `/___/> \\/__,_ / \/____//\ \_\ \\/__/\/_/ \/____/  \/_/\/_/
-                /\___/                \ \____/
-                \/__/                  \/___/
-~~~
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/piharpi/jekyll-klise) [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/piharpi/jekyll-klise) [![Deploy to Azure button](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/?feature.customportal=false&WT.mc_id=javascript-0000-jopapa#create/Microsoft.StaticApp)
 
-[blog]: https://qwtel.com/hydejack/blog/
-[portfolio]: https://qwtel.com/hydejack/variations/
-[resume]: https://qwtel.com/hydejack/resume/
-[download]: https://qwtel.com/download/
-[welcome]: https://qwtel.com/hydejack/
-[forms]: https://qwtel.com/hydejack/forms-by-example/
+## Limitation
 
-[feat]: https://qwtel.com/hydejack/#features
-[news]: https://qwtel.com/hydejack/#newsletter-subscription-box
-[syntax]: https://qwtel.com/hydejack/#syntax-highlighting
-[latex]: https://qwtel.com/hydejack/#latex-math-blocks
+- Since [`jekyll-postfiles`](https://github.com/nhoizey/jekyll-postfiles#compatibility) plugin isn't supported by github pages, this cause will make your site problems, path broken or post images won't show up, you can host alternatively using likes [netlify.com](https://netlify.com), [vercel.com](https://vercel.com), [azure.com](https://docs.microsoft.com/azure/static-web-apps/publish-jekyll) or [surge.sh](https://surge.sh) services, which support 3rd party.
 
-[license]: LICENSE.md
-[pro]: licenses/PRO.md
-[docs]: docs/7.5.2/index.md
+## Contributing
 
-[kit]: https://github.com/qwtel/hydejack-starter-kit/archive/v7.5.2.zip
-[src]: https://github.com/qwtel/hydejack
-[git]: https://github.com/qwtel/hydejack-starter-kit
-[gem]: https://rubygems.org/gems/jekyll-theme-hydejack
-[buy]: https://app.simplegoods.co/i/AQTTVBOE
+If you see any typos or formatting errors in a post, or want to helping reduce backlogs or any other issue that needs to be addressed, please do not hesitate to open a pull request and fix it!, please read [contributing](./CONTRIBUTING.md) before PR.
 
-[gpss]: https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fqwtel.com%2Fhydejack%2F
-[wiki]: https://github.com/qwtel/hydejack/blob/master/docs/7.5.2/index.md
-[pdf]: https://github.com/qwtel/hydejack/releases/download/v7.5.2/Documentation._.Hydejack.pdf
-[hy-push-state]: https://qwtel.com/hy-push-state/
-[hy-drawer]: https://qwtel.com/hy-drawer/
-[rouge]: http://rouge.jneen.net
-[katex]: https://khan.github.io/KaTeX/
-[tinyletter]: https://tinyletter.com/
+Yeaaa feel free to open a pull request.
+## Support
 
-*[FLIP]: First-Last-Invert-Play. A coding technique to achieve performant page transition animations.
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W7MJ4X) [![saweria.co](./assets/img/saweria-button.png)](https://saweria.co/piharpi)
+## License
+
+This project is open source and available under the [MIT License](LICENSE).

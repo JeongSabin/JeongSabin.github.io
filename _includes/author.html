@@ -1,24 +1,9 @@
-{% assign plugins = site.plugins | default:site.gems %}
-
-<div class="author mt4">
-  {% assign author = include.author %}
-
-  {% if author.picture %}
-    {% include srcset-img.html class="avatar" img=author.picture alt=author.name %}
-  {% elsif plugins contains 'jekyll-avatar' %}
-    {% assign avatar = author.social.github | default:author.github.username | default:author.github  %}
-    {% include avatar-tag.html user=avatar %}
-  {% endif %}
-
-  {% assign heading_tag = include.heading_tag | default:'h2' %}
-  {% assign heading_id = include.heading_id %}
-  <{{ heading_tag }} {% if heading_id %}id="{{ heading_id }}"{% endif %} class="page-title hr">
-    {{ include.heading | default:author.name }}
-  </{{ heading_tag }}>
-
-  {{ .author.about | markdownify }}
-
-  <div class="sidebar-social">
-    {% include social.html author=author %}
-  </div>
+<div class="author">
+  <img
+    class="author-avatar"
+    src="{{ site.author.avatar }}"
+    alt="{{ site.author.username }}"
+  />
+  <h2 class="author-name">{{ site.author.name }}</h2>
+  <p class="author-bio">{{ site.author.bio }}</p>
 </div>

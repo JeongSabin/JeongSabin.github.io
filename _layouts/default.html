@@ -1,61 +1,38 @@
 ---
-# Copyright (c) 2017 Florian Klampfer <https://qwtel.com/>
-#
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-#
-# The above copyright notice and this permission notice shall be included in all
-# copies or substantial portions of the Software.
-#
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-# SOFTWARE.
-
-layout: base
+layout: compress
 ---
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: " en " }}">
+{% include header.html %}
 
-{% assign strings = site.data.strings %}
+<body data-theme="{{ site.mode }}" class="notransition">
 
-<article class="page" role="article">
-  <header>
-    <h1 class="page-title">{{ page.title | default:strings.home | default:"Home" }}</h1>
-    {% include message.html text=page.description hide=page.hide_description %}
-  </header>
+  <script>
+    const body = document.body;
+    const data = body.getAttribute("data-theme");
 
-  {{ content }}
+    const initTheme = (state) => {
+      if (state === "dark") {
+        body.setAttribute("data-theme", "dark");
+      } else if (state === "light") {
+        body.removeAttribute("data-theme");
+      } else {
+        localStorage.setItem("theme", data);
+      }
+    };
+ 
+    initTheme(localStorage.getItem("theme"));
+    
+    setTimeout(() => body.classList.remove("notransition"), 75);
+  </script>
 
-  <hr class="dingbat"/>
-
-  {% if site.posts.size > 0 %}
-    <h2 class="hr">{{ strings.posts | default:"Posts" }}</h2>
-    <ul class="related-posts">
-      {% for post in site.posts limit:5 %}
-        {% include post-list-item.html post=post %}
-      {% endfor %}
-    </ul>
-  {% endif %}
-
-  {% assign pages = site.html_pages | where:"layout","page" | where_exp:"page","page.sitemap != false" %}
-  {% if pages.size > 0 %}
-    <h2 class="hr">{{ strings.pages | default:"Pages" }}</h2>
-    <ul class="related-posts">
-      {% for page in pages limit:5 %}
-        {% if page.layout == 'page' %}
-          <li class="h4">
-            <a href="{{ page.url | relative_url }}" class="flip-title">
-              <span>{{ page.title }}</span>
-            </a>
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  {% endif %}
-</article>
+  {% include navbar.html %}
+  <div class="wrapper">
+    {% include author.html %}
+    <main aria-label="Content">
+      {{ content }}
+    </main>
+    {% include footer.html %}
+  </div>
+</body>
+</html>
