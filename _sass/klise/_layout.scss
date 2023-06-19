@@ -4,8 +4,9 @@
   max-width: calc(#{$wide-size} - (#{$spacing-full} * 2));
   max-width: -webkit-calc(#{$wide-size} - (#{$spacing-full} * 2));
   position: fixed;
-  margin-right: auto;
-  margin-left: auto;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   border-bottom: 1px solid $light;
   padding: $spacing-full - 15px $spacing-full;
   @extend %clearfix;
